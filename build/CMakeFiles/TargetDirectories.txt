@@ -1,0 +1,4 @@
+C:/Users/User/Documents/Projects/c++/socket_programming/build/CMakeFiles/server.dir
+C:/Users/User/Documents/Projects/c++/socket_programming/build/CMakeFiles/parser.dir
+C:/Users/User/Documents/Projects/c++/socket_programming/build/CMakeFiles/edit_cache.dir
+C:/Users/User/Documents/Projects/c++/socket_programming/build/CMakeFiles/rebuild_cache.dir

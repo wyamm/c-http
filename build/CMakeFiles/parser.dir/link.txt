@@ -1,0 +1,2 @@
+C:\Users\User\.utils\llvm-mingw\bin\llvm-ar.exe qc libparser.a CMakeFiles/parser.dir/src/parser.cpp.obj
+C:\Users\User\.utils\llvm-mingw\bin\llvm-ranlib.exe libparser.a
