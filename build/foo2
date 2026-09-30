@@ -1,0 +1,38 @@
+auto read_http_request(int client_socket) -> std::pair<std::string, std::string> {
+    auto data = std::string();
+    auto buffer = std::vector<char>(1024);
+
+    // read until we have the full header block
+    size_t header_end;
+    while ((header_end = data.find("\r\n\r\n")) == std::string::npos) {
+        int received = recv(client_socket, buffer.data(), buffer.size(), 0);
+        if (received <= 0) {
+            closesocket(client_socket);
+            return std::make_pair(data, "");
+        }
+        data.append(buffer.data(), received);
+    }
+
+    auto header = data.substr(0, header_end);
+    // whatever came after "\r\n\r\n" in this same read is already body data
+    auto body = data.substr(header_end + 4);
+
+    // find Content-Length (case-insensitive in real HTTP, but keeping it simple here)
+    size_t content_length = 0;
+    auto cl_pos = header.find("Content-Length:");
+    if (cl_pos != std::string::npos) {
+        content_length = std::stoul(header.substr(cl_pos + 16));
+    }
+
+    // keep reading until we have exactly content_length bytes of body
+    while (body.size() < content_length) {
+        int received = recv(client_socket, buffer.data(), buffer.size(), 0);
+        if (received <= 0) {
+            closesocket(client_socket);
+            return std::make_pair(header, body);
+        }
+        body.append(buffer.data(), received);
+    }
+
+    return std::make_pair(header, body);
+}

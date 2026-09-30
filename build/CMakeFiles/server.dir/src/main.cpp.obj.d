@@ -1076,6 +1076,26 @@ CMakeFiles/server.dir/src/main.cpp.obj: \
   C:/Users/User/.utils/llvm-mingw/include/c++/v1/__stop_token/stop_token.h \
   C:/Users/User/.utils/llvm-mingw/include/c++/v1/__thread/thread.h \
   C:/Users/User/.utils/llvm-mingw/include/c++/v1/__thread/this_thread.h \
+  C:/Users/User/.utils/llvm-mingw/include/c++/v1/fstream \
+  C:/Users/User/.utils/llvm-mingw/include/c++/v1/filesystem \
+  C:/Users/User/.utils/llvm-mingw/include/c++/v1/__filesystem/copy_options.h \
+  C:/Users/User/.utils/llvm-mingw/include/c++/v1/__filesystem/directory_entry.h \
+  C:/Users/User/.utils/llvm-mingw/include/c++/v1/__filesystem/file_status.h \
+  C:/Users/User/.utils/llvm-mingw/include/c++/v1/__filesystem/file_type.h \
+  C:/Users/User/.utils/llvm-mingw/include/c++/v1/__filesystem/perms.h \
+  C:/Users/User/.utils/llvm-mingw/include/c++/v1/__filesystem/file_time_type.h \
+  C:/Users/User/.utils/llvm-mingw/include/c++/v1/__chrono/file_clock.h \
+  C:/Users/User/.utils/llvm-mingw/include/c++/v1/__filesystem/filesystem_error.h \
+  C:/Users/User/.utils/llvm-mingw/include/c++/v1/__filesystem/path.h \
+  C:/Users/User/.utils/llvm-mingw/include/c++/v1/iomanip \
+  C:/Users/User/.utils/llvm-mingw/include/c++/v1/__filesystem/operations.h \
+  C:/Users/User/.utils/llvm-mingw/include/c++/v1/__filesystem/perm_options.h \
+  C:/Users/User/.utils/llvm-mingw/include/c++/v1/__filesystem/space_info.h \
+  C:/Users/User/.utils/llvm-mingw/include/c++/v1/__filesystem/directory_iterator.h \
+  C:/Users/User/.utils/llvm-mingw/include/c++/v1/__filesystem/directory_options.h \
+  C:/Users/User/.utils/llvm-mingw/include/c++/v1/__filesystem/path_iterator.h \
+  C:/Users/User/.utils/llvm-mingw/include/c++/v1/__filesystem/recursive_directory_iterator.h \
+  C:/Users/User/.utils/llvm-mingw/include/c++/v1/__filesystem/u8path.h \
   C:/Users/User/Documents/Projects/c++/socket_programming/src/parser.h \
   C:/Users/User/.utils/llvm-mingw/include/c++/v1/set \
   C:/Users/User/.utils/llvm-mingw/include/c++/v1/__tree

@@ -12,6 +12,9 @@ namespace ps {
 auto const HOST_LEN = 6;
 auto const UA_LEN = 12;
 auto const ACCEPT_LEN = 8;
+auto const CONTENT_T_LEN = 16;
+auto const CONTENT_L_LEN = 16;
+
 auto const METHODS = std::set<std::string>{std::string("GET"), std::string("HEAD"), std::string("OPTIONS"), std::string("TRACE"),
                                             std::string("PUT"), std::string("DELETE"), std::string("POST"), std::string("PATCH"), std::string("PATCH"), std::string("CONNECT")};
 class Parser {
@@ -47,6 +50,13 @@ public:
         return accepts_;
     }
 
+    auto get_content_length() const -> size_t {
+        return content_l_;
+    }
+
+    auto set_body(const std::string &body) -> void {
+        body_ = std::move(body);
+    }
 private:
     auto parse(const std::string& buf) -> void;
 
@@ -57,6 +67,8 @@ private:
     std::string host_port_;
     std::string user_agent_;
     std::string accepts_;
+    size_t content_l_ = 0;
+    std::string content_t_;
 
     std::string body_;
 };

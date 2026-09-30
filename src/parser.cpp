@@ -59,6 +59,13 @@ auto ps::Parser::parse(const std::string& buf) -> void {
             http_version_ = request_line[2];
 
             break;
+        } else if (token == "Content-Length: ") {
+            auto stream = std::stringstream(buf.substr(CONTENT_L_LEN));
+            stream >> content_l_;
+            break;
+        } else if (token == "Content-Type: ") {
+            content_t_ = buf.substr(CONTENT_T_LEN);
+            break;
         }
     }
 
